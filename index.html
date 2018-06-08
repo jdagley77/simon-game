@@ -2,6 +2,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Simon Says</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -9,9 +10,17 @@
 	<div id='dashboard'>
 		<p id='steps'>Steps: 0</p>
 		<p id='score'></p>
-		<button id='start'>Start</button>
-		<button id='restart'>Restart</button> <br>
-		<button id='strict-mode'>strict mode</button>
+		<button id='start'><span>Start</span></button>
+		<button id='restart'><span>Restart</span></button><br>
+		<!-- <button id='strict-mode'>strict mode</button> -->
+		<div>
+			<label class='toggle-switch'>
+				<input type="checkbox" id='strict-mode'>
+				<span class='slider round'></span>
+			</label> <br>
+			<span id='strict-text'>strict mode</span>
+		</div>
+
 	</div>
 	
 	<div id='container'>

@@ -72,9 +72,41 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  transition: all 0.5s;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#start span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+#start span:after {
+	content: "\f04b";
+  font-family: FontAwesome;
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+	color: white;
+}
+
+#start:hover span {
+	padding-right: 25px;
+}
+
+#start:hover span:after {
+	opacity: 1;
+	right: 0;
 }
 
 #restart {
+	margin: 10px;
 	background-color: orange; 
   border: none;
   color: white;
@@ -83,18 +115,37 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  transition: all 0.5s;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
-#strict-mode {
-	margin-top: 5px;
-	background-color: purple; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+#restart span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+#restart span:after {
+	content: "\f01e";
+  font-family: FontAwesome;
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+	color: white;
+}
+
+#restart:hover span {
+	padding-right: 25px;
+}
+
+#restart:hover span:after {
+	opacity: 1;
+	right: 0;
 }
 
 #message {
@@ -102,4 +153,63 @@ body {
 	text-align: center;
 	color: red;
 	font-size: 25px;
+}
+
+.toggle-switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 33px;
+}
+
+.toggle-switch input {
+	display: none;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: grey;
+	-webkit-transition: .4s;
+	transition: 4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 25px;
+	width: 25px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .slider {
+	background-color: red;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px green;
+}
+
+input:checked + .slider:before {
+	transform: translateX(28px);
+}
+
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+#strict-text {
+	color: black;
 }
