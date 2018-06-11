@@ -8,27 +8,23 @@
 <body>
 	<audio></audio>
 	<div id='dashboard'>
-		<p id='steps'>Steps: 0</p>
-		<p id='score'></p>
 		<button id='start'><span>Start</span></button>
 		<button id='restart'><span>Restart</span></button><br>
-		<!-- <button id='strict-mode'>strict mode</button> -->
-		<div>
-			<label class='toggle-switch'>
-				<input type="checkbox" id='strict-mode'>
-				<span class='slider round'></span>
-			</label> <br>
-			<span id='strict-text'>strict mode</span>
-		</div>
-
+		<label class='toggle-switch'>
+			<input type="checkbox" id='strict-mode'>
+			<span class='slider round'></span>
+		</label> <br>
+		<span id='strict-text'>strict mode</span>
 	</div>
 	
+	<div id='score-test'><p id='score'></p></div>
 	<div id='container'>
 		<div class='blue color-button'></div>
 		<div class='yellow color-button'></div>
 		<div class='green color-button'></div>
 		<div class='red color-button'></div>
 	</div>
+	<p id='steps'></p>
 	<p id='message'></p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src='scripts.js' type="text/javascript"></script>

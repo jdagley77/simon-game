@@ -8,50 +8,51 @@ body {
 	width: 450px;
 	margin: 0 auto;
 	text-align: center;
-	margin-top: 5%;
-	border-radius: 50%;
+	margin-top: 3%;
+	border-radius: 100%;
+	background-color: black;
+	padding: 15px 10px 0px 10px;
 }
 
 .color-button {
 	display: inline-block;
-	height: 49%;
-	width: 49%;
+	height: 40%;
+	width: 40%;
 	filter: brightness(0.75);
+	padding: 4%;
 }
 
-#center {
+/*#center {
 	height: 10%;
 	width: 10%;
 	background-color: black;
 	margin: 0 auto;
 	top: 10%;
-}
+}*/
 
 .blue {
 	background-color: rgb(102,178,255);	
-	border-radius: 75% 0 0 0;
+	border-radius: 100% 0 0 0;
 }
 
 .yellow {
 	background-color: rgb(255,255,102);
-	border-radius: 0 75% 0 0;
+	border-radius: 0 100% 0 0;
 }
 
 .green {
 	background-color: rgb(102,255,102);
-	border-radius: 0 0 0 75%;
+	border-radius: 0 0 0 100%;
 }
 
 .red {
 	background-color: rgb(255,102,102);
-	border-radius: 0 0 75% 0;
+	border-radius: 0 0 100% 0;
 }
 
 .active {
 	filter: brightness(1);
 	display: inline-block;
-	height: 49%;
-	width: 49%;
 }
 
 #dashboard {
@@ -60,6 +61,16 @@ body {
 }
 
 #score, #start, #steps {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#score {
+	color: white;
+	padding-top: 10px;
+}
+
+#steps {
 	font-size: 25px;
 }
 
@@ -212,4 +223,14 @@ input:checked + .slider:before {
 
 #strict-text {
 	color: black;
+}
+
+#score-test {
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: center;
+	height: 50px;
+	width: 75px;
+	background-color: black;
+	border-radius: 5px;
 }
