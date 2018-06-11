@@ -21,6 +21,7 @@ let buttonsClicked = [],
 		score = 0,
 		numberOfSteps = newCombo.length,
 		strictMode = false;
+		// formattedNumber = ("0" + score).slice(-2);
 
 // -------------------------------------------------------
 // click events
@@ -36,12 +37,12 @@ $(restart).on('click', function(e) {
 	newCombo.length = 0;
 	numberOfSteps = 0;
 	buttonsClicked.length = 0;
-	scoreBoard.text('Score: '+score)
+	scoreBoard.text(convertScore(score))
 	initNewRound();
 })
 
 $(start).on('click', function(e) {
-	scoreBoard.text('Score: '+score)
+	scoreBoard.text(convertScore(score))
 	initNewRound();
 })
 
@@ -59,6 +60,10 @@ Array.from(buttons).forEach(function(elem){
 })
 
 // -------------------------------------------------------
+
+function convertScore(n){
+    return n > 9 ? "" + n: "0" + n;
+}
 
 function playSound(color) {
 	audio.attr('src', sounds[color]);
@@ -78,7 +83,7 @@ function resetGame() {
 	newCombo.length = 0; //this will be random and add 1 every round
 	buttonsClicked.length = 0;
 	score = 0;
-	scoreBoard.text('Score: '+score);
+	scoreBoard.text(convertScore(score));
 	numberOfSteps = newCombo.length;
 	steps.text('Steps: '+numberOfSteps);
 	strictMode = false;
@@ -93,7 +98,6 @@ function resetNoStrict() {
 
 function toggleStrictMode() {
 	strictMode = !strictMode;
-	console.log(strictMode)
 	if (strictMode) {
 		$('#strict-text').css({'color': 'red'})
 	} else {
@@ -124,7 +128,7 @@ function lightUpBoard(newCombo) {
 
 function updateScore() {
 	score += 1;
-	scoreBoard.text('Score: '+score)
+	scoreBoard.text(convertScore(score))
 	if (score === 20) {
 		alert('you win!')
 	}
